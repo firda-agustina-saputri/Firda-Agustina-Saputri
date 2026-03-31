@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>BlogKu</title>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>BlogKu</h1>
+
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">About</a> |
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    
+    <main>
+
+        <article>
+            <h2>Belajar HTML</h2>
+            <p><i>Tanggal: 1 Maret 2026</i></p>
+            <p>HTML adalah bahasa dasar untuk membuat website.</p>
+        </article>
+
+        <article>
+            <h2>Belajar CSS</h2>
+            <p><i>Tanggal: 5 Maret 2026</i></p>
+            <p>CSS digunakan untuk mempercantik tampilan website.</p>
+        </article>
+
+        <article>
+            <h2>Belajar JavaScript</h2>
+            <p><i>Tanggal: 10 Maret 2026</i></p>
+            <p>JavaScript membuat website menjadi interaktif.</p>
+        </article>
+
+        <aside>
+            <h3>Artikel Populer</h3>
+            <ul>
+                <li><a href="#">Cara Membuat Website</a></li>
+                <li><a href="#">Tips Belajar Coding</a></li>
+                <li><a href="#">HTML vs CSS vs JS</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BlogKu</p>
+    </footer>
+
+</body>
+</html>
