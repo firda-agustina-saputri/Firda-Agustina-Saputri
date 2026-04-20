@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Lomba</title>
+</head>
+
+<body>
+
+<h2>Form Pendaftaran Lomba</h2>
+
+<form action="#" method="post" autocomplete="on">
+
+    <!-- DATA PESERTA -->
+    <fieldset>
+        <legend>Data Peserta</legend>
+
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required><br><br>
+
+        <label for="umur">Umur:</label><br>
+        <input type="number" id="umur" name="umur" min="5" max="60" required><br><br>
+
+        <label for="hp">Nomor HP:</label><br>
+        <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" required><br><br>
+
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="pria" name="jk" value="Pria">
+        <label for="pria">Pria</label>
+
+        <input type="radio" id="wanita" name="jk" value="Wanita">
+        <label for="wanita">Wanita</label>
+    </fieldset>
+
+    <br>
+
+    <!-- PILIH LOMBA -->
+    <fieldset>
+        <legend>Pilihan Lomba</legend>
+
+        <label for="lomba">Pilih Lomba:</label><br>
+        <select id="lomba" name="lomba" required>
+            <option value="">-- Pilih Lomba --</option>
+            <option value="balap karung">Lomba lari</option>
+            <option value="makan kerupuk">Voli</option>
+            <option value="tarik tambang">Futsal</option>
+            <option value="panjat pinang">Sepak Bola</option>
+        </select><br><br>
+
+        <!-- TAMBAHAN TANGGAL -->
+        <label for="tanggal">Tanggal Pendaftaran:</label><br>
+        <input type="date" id="tanggal" name="tanggal" required><br><br>
+
+        <label for="foto">Upload Kartu Identitas:</label><br>
+        <input type="file" id="foto" name="foto"><br><br>
+
+        <label>Kategori Usia:</label><br>
+        <input type="checkbox" id="anak" name="kategori" value="anak">
+        <label for="anak">Anak-anak</label>
+
+        <input type="checkbox" id="remaja" name="kategori" value="remaja">
+        <label for="remaja">Remaja</label>
+
+        <input type="checkbox" id="dewasa" name="kategori" value="dewasa">
+        <label for="dewasa">Dewasa</label><br><br>
+
+        <label for="catatan">Keterangan Mengikuti:</label><br>
+        <textarea id="catatan" name="catatan" rows="4" placeholder="Tulis catatan..."></textarea>
+    </fieldset>
+
+    <br>
+
+    <!-- TOMBOL -->
+    <input type="submit" value="Daftar">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
