@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeri Produk</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 25%;
+            padding: 5px;
+        }
+
+        .item img {
+            width: 100%;
+            border: 2px solid black;
+            transition: 0.3s;
+        }
+
+        .item img:hover {
+            transform: scale(1.05);
+            border-color: red;
+        }
+
+        @media (max-width: 768px) {
+            .item {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Galeri Produk</h1>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a> |
+    <a href="gallery.html">Galeri</a> |
+    <a href="form.html">Kontak</a>
+</nav>
+
+<main>
+
+<section>
+
+<figure>
+    <a href="https://www.instagram.com/p/DMuJDwJPoMH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <img src="dimsummentai.png"alt="Kue tradisional">
+    </a>
+    <figcaption>variandimsum 1</figcaption>
+</figure>
+
+<figure>
+    <a href="https://www.instagram.com/p/DPK6i6ND8Xj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <img src="dimsumgorengkejulumer.png" alt="Kue manis">
+    </a>
+    <figcaption>variandimsum 2</figcaption>
+</figure>
+
+<figure>
+    <a href="https://www.instagram.com/reel/DUFrBA5j1A8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <img src="Cuplikan layar 2026-04-28 201033.png" alt="Kue basah">
+    </a>
+    <figcaption>variandimsum 3</figcaption>
+</figure>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 UMKM dimsumnarawibwi</p>
+</footer>
+
+</body>
+</html>
