@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>animasi-praktikum</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+}
+
+/* P-1 Navbar */
+.navbar{
+    background-color: blue;
+    color:white;
+    padding:15px;
+    position:fixed;
+    top:0;
+    width:100%;
+    transition:0.5s;
+}
+
+.scrolled{
+    background-color: darkblue;
+}
+
+.navbar ul{
+    list-style:none;
+}
+
+.navbar li{
+    display:inline;
+    margin-right:20px;
+}
+
+/* P-2 Hero */
+.hero{
+    margin-top:60px;
+    text-align:center;
+    padding:100px;
+    background-color:lightblue;
+}
+
+.hero h1{
+    animation:muncul 2s;
+}
+
+.hero p{
+    animation:muncul 3s;
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* P-3 Grid Produk */
+.produk{
+    text-align:center;
+    padding:30px;
+}
+
+.card{
+    width:200px;
+    border:1px solid black;
+    padding:15px;
+    margin:10px;
+    display:inline-block;
+    transition:0.5s;
+}
+
+.card:hover{
+    transform:scale(1.1);
+    background-color:lightyellow;
+    box-shadow:5px 5px 10px gray;
+}
+
+/* P-4 Spinner */
+.spinner{
+    width:50px;
+    height:50px;
+    border:5px solid lightgray;
+    border-top:5px solid blue;
+    border-radius:50%;
+    margin:30px auto;
+    animation:putar 1s linear infinite;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes putar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* P-5 Tombol CTA */
+.btn{
+    display:block;
+    margin:30px auto;
+    padding:10px 20px;
+    background-color:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+    animation:pulse 1s infinite;
+}
+
+.btn:hover{
+    background-color:darkgreen;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+/* P-6 Animasi Kreatif */
+.bola{
+    width:60px;
+    height:60px;
+    background-color:red;
+    border-radius:50%;
+    margin:50px auto;
+    animation:pantul 2s infinite;
+}
+
+@keyframes pantul{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-100px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- P-1 -->
+<div class="navbar" id="navbar">
+    <ul>
+        <li>Home</li>
+        <li>Produk</li>
+        <li>Kontak</li>
+    </ul>
+</div>
+
+<!-- P-2 -->
+<div class="hero">
+    <h1>Praktikum CSS Animation</h1>
+    <p>Contoh Transition, Transform dan Animation</p>
+</div>
+
+<!-- P-3 -->
+<div class="produk">
+
+    <h2>Daftar Produk</h2>
+
+    <div class="card">
+        <h3>Produk 1</h3>
+        <p>Deskripsi Produk</p>
+    </div>
+
+    <div class="card">
+        <h3>Produk 2</h3>
+        <p>Deskripsi Produk</p>
+    </div>
+
+    <div class="card">
+        <h3>Produk 3</h3>
+        <p>Deskripsi Produk</p>
+    </div>
+
+    <div class="card">
+        <h3>Produk 4</h3>
+        <p>Deskripsi Produk</p>
+    </div>
+
+</div>
+
+<!-- P-4 -->
+<div class="spinner"></div>
+
+<!-- P-5 -->
+<button class="btn">Klik Saya</button>
+
+<!-- P-6 -->
+<div class="bola"></div>
+
+<script>
+window.addEventListener("scroll", function(){
+
+    let navbar = document.getElementById("navbar");
+
+    if(window.scrollY > 50){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }
+
+});
+</script>
+
+</body>
+</html>
