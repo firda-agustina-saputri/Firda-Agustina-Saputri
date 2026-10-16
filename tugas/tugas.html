@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Produk UMKM - Pertemuan 4</title>
+    <!-- Memanggil file JavaScript eksternal dengan atribut defer -->
+    <script src="assets/js/form_handler.js" defer></script>
+</head>
+<body>
+
+    <div>
+        <h2>Form Input Produk UMKM</h2>
+        
+        <!-- Form Input Interaktif -->
+        <form id="product-form">
+            <div>
+                <label for="product-name">Nama Produk:</label><br>
+                <input type="text" id="product-name" placeholder="Contoh: Teh Taro" autocomplete="off">
+            </div>
+            <br>
+
+            <div>
+                <label for="product-category">Kategori:</label><br>
+                <select id="product-category">
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Snack">Snack</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <label for="product-price">Harga (Rp):</label><br>
+                <input type="number" id="product-price" placeholder="Contoh: 6000" min="0">
+            </div>
+            <br>
+
+            <div>
+                <label for="product-stok">Stok Awal:</label><br>
+                <input type="number" id="product-stok" placeholder="Contoh: 35" min="0">
+            </div>
+            <br>
+
+            <button type="submit">Simpan ke Mock Data</button>
+        </form>
+
+        <!-- Tampilan Feedback Visual (Sukses/Gagal) tanpa alert() -->
+        <div id="form-feedback" class="feedback-msg" style="margin-top: 15px; font-weight: bold;"></div>
+
+        <!-- Live Preview Data (Event Handling: 'input' & 'change') -->
+        <div style="margin-top: 25px; border: 1px solid #ccc; padding: 10px;">
+            <h3>Live Preview Produk:</h3>
+            <p><strong>Nama:</strong> <span id="preview-name">-</span></p>
+            <p><strong>Kategori:</strong> <span id="preview-category">-</span></p>
+            <p><strong>Harga:</strong> <span id="preview-price">-</span></p>
+            <p><strong>Stok:</strong> <span id="preview-stok">-</span></p>
+        </div>
+    </div>
+
+</body>
+</html>
