@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usaha Merah Putih - Materi 4</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header-merah">
+        <div class="header-container">
+            <div class="header-text">
+                <h1>Griya Teh UMKM</h1>
+                <p>Sentra Pendataan Aneka Olahan Teh</p>
+            </div>
+            <nav class="header-nav">
+                <a href="materi4.html" class="nav-link active">Form Input (Materi 4)</a>
+                <a href="materi5.html" class="nav-link">Katalog Card (Materi 5)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Tambah Produk Baru</h2>
+            <form id="formProduk">
+                <div class="form-group">
+                    <label for="nama">Nama Produk</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama produk">
+                </div>
+                <div class="form-group">
+                    <label for="harga">Harga Produk (Rp)</label>
+                    <input type="number" id="harga" placeholder="Contoh: 5000" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="kategori">Kategori Produk</label>
+                    <select id="kategori">
+                        <option value="">Pilih kategori</option>
+                        <option value="Makanan">Makanan</option>
+                        <option value="Minuman">Minuman</option>
+                        <option value="Kerajinan">Kerajinan</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stok">Stok Produk</label>
+                    <input type="number" id="stok" placeholder="Masukkan jumlah stok" min="0">
+                </div>
+                <button type="submit">Tambah Produk</button>
+            </form>
+            <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="card">
+            <h2>Preview Input</h2>
+            <div class="preview">
+                <p><strong>Nama:</strong> <span id="previewNama">-</span></p>
+                <p><strong>Harga:</strong> <span id="previewHarga">Rp 0</span></p>
+                <p><strong>Kategori:</strong> <span id="previewKategori">-</span></p>
+                <p><strong>Stok:</strong> <span id="previewStok">0</span></p>
+            </div>
+        </section>
+
+        <section class="card card-data-produk">
+            <h2>Kelola Data Produk</h2>
+            <div class="filter-search-container">
+                <input type="text" id="cariProduk" placeholder="Cari nama produk...">
+                <select id="filterKategori">
+                    <option value="">Semua Jenis</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Kerajinan">Kerajinan</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </div>
+            <div class="table-responsive">
+                <table class="tabel-produk">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nama Produk</th>
+                            <th>Harga</th>
+                            <th>Jenis</th>
+                            <th>Stok</th>
+                            <th class="aksi-col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarProduk">
+                        <!-- Baris tabel dirender via dom_renderer.js -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="pagination" class="pagination-container">
+                <button id="btnPrev" disabled>&laquo; Sebelumnya</button>
+                <span id="pageInfo">Halaman 1</span>
+                <button id="btnNext">Selanjutnya &raquo;</button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./assets/js/dom_renderer.js"></script>
+</body>
+</html>
