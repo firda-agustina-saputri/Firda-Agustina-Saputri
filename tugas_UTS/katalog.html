@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Data Lahan & Tanaman - UTS</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Sistem Manajemen Data Lahan & Tanaman</h1>
+                <p>Sentra Pendataan Lahan & Komoditas Pertanian</p>
+            </div>
+            
+            <nav class="header-nav">
+                <!-- Teks sapaan dynamic user -->
+                <span id="salam-user" class="salam-user-text"></span>
+                
+                <a href="tambahproduk.html" class="nav-btn">Form Input</a>
+                <a href="katalog.html" class="nav-btn">Katalog Utama</a>
+                
+                <!-- Tombol Keluar (Logout) -->
+                <a href="#" id="btn-logout" class="nav-btn btn-logout">Keluar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- KONTEN UTAMA KATALOG -->
+    <div class="container main-container-spacing">
+        <h2 class="katalog-heading">Daftar Lahan & Tanaman</h2>
+        <p class="katalog-subheading">Kelola dan pantau seluruh data inventaris lahan yang tersedia dalam sistem.</p>
+
+        <!-- KOTAK PEMBUNGKUS UTAMA -->
+        <div class="card">
+            <div class="katalog-card-header">
+                <div>
+                    <h3 class="katalog-card-title">Semua Lahan Pertanian</h3>
+                    <p class="katalog-card-desc">Daftar data lahan yang tersimpan.</p>
+                </div>
+                <div class="katalog-total-count">
+                    Total Lahan: <span id="total-count" class="count-highlight">0 Lahan</span>
+                </div>
+            </div>
+
+            <!-- GRID KATALOG CARD (Dirender Dinamis dari localStorage) -->
+            <div class="card-grid" id="land-card-container">
+                <!-- Kartu data akan muncul otomatis di sini -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="container">
+            <p>&copy; 2026 Sistem Manajemen Data Lahan & Tanaman. Evaluasi UTS Frontend.</p>
+            <p class="footer-nim">NIM: 1125102216 | Teknik Informatika</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT RENDER KATALOG DARI LOCALSTORAGE -->
+    <script src="./asset/js/main.js" type="module"></script>
+</body>
+</html>

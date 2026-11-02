@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Akun - Sistem Manajemen Lahan & Tanaman</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+<body>
+
+    <!-- KONTEN UTAMA HALAMAN REGISTRASI -->
+    <div class="container" style="max-width: 500px; margin-top: 40px; margin-bottom: 40px;">
+        <div class="card">
+            <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #1a1d20;">Form Registrasi Akun</h2>
+            
+            <form id="form-registrasi" novalidate>
+                <!-- Input 1: Username -->
+                <div class="form-group" id="group-username">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Masukkan username (min 4 karakter)">
+                    <span class="error-text" id="error-username"></span>
+                </div>
+
+                <!-- Input 2: Email -->
+                <div class="form-group" id="group-email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="nama@stikom.ac.id">
+                    <span class="error-text" id="error-email"></span>
+                </div>
+
+                <!-- Input 3: Password -->
+                <div class="form-group" id="group-password">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password (min 6 karakter)">
+                    <span class="error-text" id="error-password"></span>
+                </div>
+
+                <!-- Input 4: Konfirmasi Password -->
+                <div class="form-group" id="group-confirm-password">
+                    <label for="confirm-password">Konfirmasi Password</label>
+                    <input type="password" id="confirm-password" placeholder="Ulangi password kamu">
+                    <span class="error-text" id="error-confirm-password"></span>
+                </div>
+
+                <!-- Tombol Submit -->
+                <button type="submit">Daftar Akun</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="container">
+            <p>&copy; 2026 Sistem Manajemen Data Lahan & Tanaman. Evaluasi UTS Frontend.</p>
+            <p class="footer-nim">NIM: 1125102216 | Teknik Informatika</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT VALIDASI REGISTRASI -->
+  <script src="./asset/js/main.js" type="module"></script>
+</body>
+</html>

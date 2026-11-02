@@ -1,0 +1,465 @@
+/* ==========================================
+   1. PENGATURAN UMUM (GLOBAL)
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fcfbf9; /* Latar belakang putih gading/krem lembut */
+    color: #2c221e;
+    line-height: 1.5;
+    padding: 0;
+}
+
+
+/* ==========================================
+   2. HEADER / NAVBAR STYLING (RESPONSIF)
+   ========================================== */
+.app-header {
+    background-color: #a67c52; /* Warna coklat muda hangat (earthy brown) */
+    color: #ffffff;
+    padding: 16px 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;       
+    justify-content: space-between;
+    align-items: center;      
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.header-title h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.header-title p {
+    font-size: 13px;
+    color: #f3e9dc;
+    margin: 0;
+}
+
+.header-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-left: auto;        
+    align-items: center;
+}
+
+/* Teks Sapaan User di Navigasi */
+.salam-user-text {
+    color: #fff;
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Tombol Navigasi di Header */
+.nav-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    text-align: center;
+    
+    color: #ffffff;                    
+    background-color: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+    color: #ffffff;
+}
+
+/* Tombol Logout Khusus */
+.nav-btn.btn-logout {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.nav-btn.btn-logout:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
+
+.nav-btn.btn-outline {
+    background-color: #ffffff;
+    color: #8c6239;
+    border: 1px solid #ffffff;
+}
+
+.nav-btn.btn-outline:hover {
+    background-color: #f7f3ed;
+}
+
+.nav-btn.btn-solid {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-btn.btn-solid:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ==========================================
+   2. GAYA HALAMAN UTAMA & CONTAINER
+   ========================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.main-container-spacing {
+    margin-bottom: 40px;
+}
+
+.container h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c221e;
+    margin-bottom: 6px;
+}
+
+.container > p {
+    font-size: 14px;
+    color: #6b5b52;
+    margin-bottom: 24px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(166, 124, 82, 0.06);
+    border: 1px solid #eae1d6;
+    width: 100%;
+}
+
+.card-spacing {
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c221e;
+    margin-bottom: 20px;
+}
+
+.form-instruction {
+    font-size: 13px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   STYLING CARD GRID (KATALOG KARTU RAPI)
+   ========================================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.land-card {
+    background-color: #ffffff;
+    border: 1px solid #eae1d6;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.land-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(166, 124, 82, 0.12);
+}
+
+.land-card .card-title {
+    color: #8c6239; /* Judul kartu coklat muda elegan */
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.land-card .card-info p {
+    margin: 4px 0;
+    font-size: 13px;
+    color: #5c4d44;
+}
+
+.land-card .card-info p strong {
+    color: #2c221e;
+}
+
+
+/* ==========================================
+   Tabel Inventaris Lahan
+   ========================================== */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabel-produk {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.tabel-produk th {
+    background-color: #f7f3ed; /* Header tabel coklat susu sangat soft */
+    color: #8c6239;
+    font-weight: 600;
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5d8cc;
+}
+
+.tabel-produk td {
+    padding: 16px;
+    border-bottom: 1px solid #f1ece6;
+    color: #2c221e;
+    vertical-align: middle;
+}
+
+/* Badge Kategori */
+.badge-kategori {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f7f3ed; 
+    color: #8c6239;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e5d8cc;
+}
+
+
+/* ==========================================
+   3. GAYA FORM & INPUT (REGISTRASI / TAMBAH)
+   ========================================== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group-spacing {
+    margin-bottom: 16px;
+}
+
+.form-group-spacing-lg {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b2f28;
+}
+
+.form-group input,
+.form-group select,
+.select-kategori {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid #d4c5b9;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #2c221e;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.select-kategori:focus {
+    border-color: #a67c52; 
+    box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.15);
+}
+
+/* Wrapper Filter & Search */
+.filter-wrapper {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 10px; 
+    margin: 15px 0; 
+    flex-wrap: wrap;
+}
+
+.search-input {
+    padding: 8px 12px; 
+    border: 1px solid #ced4da; 
+    border-radius: 6px; 
+    flex: 1; 
+    min-width: 200px;
+}
+
+.filter-select {
+    padding: 8px 12px; 
+    border: 1px solid #ced4da; 
+    border-radius: 6px; 
+    background: white;
+}
+
+/* Tombol Submit Form */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #a67c52; /* Tombol submit coklat muda hangat */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #8c6239; 
+}
+
+.pesan-validasi {
+    display: none;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.pesan-validasi.berhasil {
+    display: block;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.pesan-validasi.gagal {
+    display: block;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+
+/* ==========================================
+   FOOTER STYLING
+   ========================================== */
+.footer-container {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #eae1d6;
+    text-align: center;
+    color: #6b5b52;
+    font-size: 12px;
+}
+
+.footer-nim {
+    font-weight: 600;
+    color: #a67c52; 
+    margin-top: 4px;
+}
+
+
+/* ==========================================
+   4. MEDIA QUERIES (RESPONSIF UNTUK HP)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    .app-header {
+        padding: 16px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
+/* ==========================================
+   STYLING KHUSUS HALAMAN KATALOG UTAMA
+   ========================================== */
+.katalog-heading {
+    font-size: 26px; 
+    font-weight: 700; 
+    margin-bottom: 4px; 
+    color: #212529;
+}
+
+.katalog-subheading {
+    color: #6c757d; 
+    margin-bottom: 24px; 
+    font-size: 14px;
+}
+
+.katalog-card-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.katalog-card-title {
+    margin: 0; 
+    font-size: 18px; 
+    font-weight: 700; 
+    color: #a67c52; /* Menyesuaikan tema earthy brown project kamu */
+}
+
+.katalog-card-desc {
+    margin: 4px 0 0 0; 
+    font-size: 13px; 
+    color: #6c757d;
+}
+
+.katalog-total-count {
+    font-size: 14px; 
+    font-weight: 600; 
+    color: #495057;
+}
+
+.count-highlight {
+    color: #a67c52; 
+    font-weight: 700;
+}
